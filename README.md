@@ -1,5 +1,10 @@
 # 📷 视觉桥（Vision Bridge）
 
+![banner](banner.svg)
+
+![Platform](https://img.shields.io/badge/Platform-Windows-0078D6) ![PowerShell](https://img.shields.io/badge/PowerShell-Zero_Dep-5391FE) ![Vision](https://img.shields.io/badge/Vision-GLM_/_Qwen_VL-b45309) ![Works_with](https://img.shields.io/badge/Works_with-Claude_Code_·_Codex-black)
+
+
 > **给纯文本 AI 装一只"眼睛"——让它也能看懂你的截图**
 >
 > 作者：陈启粤 · 最后更新：2026-08-09 · 版本：v4.1
@@ -24,6 +29,16 @@
 14. [更新日志](#14-更新日志)
 
 ---
+
+## 🔄 工作原理
+
+```mermaid
+flowchart LR
+    A[📸 截图 / 粘贴图片] --> B[👀 ClipboardImageWatcher<br>剪贴板监视]
+    B --> C[🧠 视觉模型<br>GLM / Qwen-VL / Windows OCR]
+    C --> D[📝 文字 / JSON 描述]
+    D --> E[🤖 AI 主模型<br>Claude Code / Codex / Cursor]
+```
 
 ## 1. 这是什么？为什么需要它？
 
